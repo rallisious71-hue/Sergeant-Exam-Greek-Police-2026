@@ -1,0 +1,205 @@
+.page {
+  padding: 28px 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.setup {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.setup h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.setupRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.setupRow label {
+  font-size: 14px;
+  color: var(--text-muted);
+  min-width: 140px;
+}
+
+.setupRow select,
+.setupRow input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 7px;
+  outline: none;
+}
+
+.setupRow input { width: 80px; }
+
+.primaryBtn {
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 11px 24px;
+  border-radius: 8px;
+  margin-top: 8px;
+  transition: background 0.15s;
+}
+.primaryBtn:hover { background: #3a7be8; }
+
+.secondaryBtn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 11px 24px;
+  border-radius: 8px;
+  transition: all 0.15s;
+}
+.secondaryBtn:hover { color: var(--text); border-color: var(--text-muted); }
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent3));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.questionCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.qHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.qNum {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.qScore {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.qText {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: var(--text);
+  text-align: left;
+  transition: all 0.15s;
+}
+.option:hover:not(:disabled) { border-color: var(--accent); background: rgba(79,142,247,0.06); }
+.option:disabled { cursor: default; }
+.option.correct { background: rgba(91,255,160,0.1); border-color: var(--accent3); color: var(--accent3); }
+.option.wrong { background: rgba(247,95,79,0.1); border-color: var(--danger); color: var(--danger); }
+
+.explanation {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(79,142,247,0.05);
+  border: 1px solid rgba(79,142,247,0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #b0b8d0;
+  white-space: pre-wrap;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+
+.result {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 60px 28px;
+  text-align: center;
+}
+
+.bigScore {
+  font-family: var(--font-mono);
+  font-size: 64px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bigLbl {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.msg {
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.resultActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 16px 14px; }
+  .questionCard { padding: 20px 16px; }
+  .qText { font-size: 16px; }
+}

@@ -1,0 +1,43 @@
+:root {
+  --bg: #0d0f14;
+  --surface: #161921;
+  --card: #1e2330;
+  --border: #2a3045;
+  --accent: #4f8ef7;
+  --accent2: #f7a24f;
+  --accent3: #4fcf8e;
+  --danger: #f75f4f;
+  --text: #e8eaf2;
+  --text-muted: #7a8099;
+  --pk: #5b8cff;
+  --kpd: #ff9f5b;
+  --ast: #5bffa0;
+  --font-serif: 'Crimson Pro', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
